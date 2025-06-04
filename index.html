@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bayram Mesajı</title>
+    <!-- Google Fonts'dan Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #222;
+        }
+        #mesaj {
+            font-size: 3rem; /* 48px */
+            font-weight: 600;
+            text-align: center;
+            color: #0077b6;
+            margin-bottom: 40px;
+        }
+        #iban {
+            font-size: 1.5rem; /* 24px */
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        #not {
+            font-size: 1.25rem; /* 20px */
+            color: #555;
+            font-style: italic;
+            font-weight: 400;
+        }
+    </style>
+    <script>
+        function gosterMesaj() {
+            const mesajlar = [
+                "Bayramınız mübarek olsun!",
+                "Sevdiklerinizle birlikte nice bayramlara!",
+                "Bayram size sağlık ve mutluluk getirsin!",
+                "Bayramda yüzünüz hep gülsün!",
+                "Huzur ve bereket dolu bir bayram dilerim!",
+                "Bayramda gönlünüzce eğlenin!",
+                "Tüm dualarınız kabul olsun, iyi bayramlar!",
+                "Bayram sevinci evinizi sarsın!",
+                "Gönlünüzden geçen her şey gerçek olsun!",
+                "Mutlu, huzurlu ve neşeli bir bayram geçirmeniz dileğiyle!"
+            ];
+
+            const rastgeleIndex = Math.floor(Math.random() * mesajlar.length);
+            document.getElementById("mesaj").innerText = mesajlar[rastgeleIndex];
+        }
+
+        window.onload = gosterMesaj;
+    </script>
+</head>
+<body>
+    <div id="mesaj"></div>
+    <div id="iban">IBAN: <strong>TR06 0004 6005 4988 8000 1679 40</strong></div>
+    <div id="not">Harçlıklarınızı bekliyorum 😄</div>
+</body>
+</html>
