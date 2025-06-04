@@ -2,66 +2,81 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Bayram Mesajı</title>
-    <!-- Google Fonts'dan Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Kurban Bayramı Mesajı</title>
     <style>
         body {
-            background-color: #f0f8ff;
+            background-image: url('pngtree-mesmerizing-blend-of-blue-and-purple-hues-in-a-stunning-abstract-picture-image_5788702.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: 'Poppins', sans-serif;
-            color: #222;
+            font-family: Arial, sans-serif;
+            color: #000;
         }
         #mesaj {
-            font-size: 3rem; /* 48px */
-            font-weight: 600;
+            font-size: 2.5rem;
+            font-weight: bold;
             text-align: center;
-            color: #0077b6;
-            margin-bottom: 40px;
+            background-color: rgba(255, 255, 255, 0.75);
+            padding: 20px 30px;
+            border-radius: 15px;
+            max-width: 80%;
+            margin-bottom: 20px;
         }
-        #iban {
-            font-size: 1.5rem; /* 24px */
-            color: #333;
-            margin-bottom: 10px;
-            font-weight: 400;
+        #btn {
+            padding: 12px 24px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            background-color: #0077b6;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        #not {
-            font-size: 1.25rem; /* 20px */
-            color: #555;
-            font-style: italic;
-            font-weight: 400;
+        #btn:hover {
+            background-color: #005f8a;
         }
     </style>
-    <script>
-        function gosterMesaj() {
-            const mesajlar = [
-                "Bayramınız mübarek olsun!",
-                "Sevdiklerinizle birlikte nice bayramlara!",
-                "Bayram size sağlık ve mutluluk getirsin!",
-                "Bayramda yüzünüz hep gülsün!",
-                "Huzur ve bereket dolu bir bayram dilerim!",
-                "Bayramda gönlünüzce eğlenin!",
-                "Tüm dualarınız kabul olsun, iyi bayramlar!",
-                "Bayram sevinci evinizi sarsın!",
-                "Gönlünüzden geçen her şey gerçek olsun!",
-                "Mutlu, huzurlu ve neşeli bir bayram geçirmeniz dileğiyle!"
-            ];
+</head>
+<body>
+    <div id="mesaj"></div>
+    <button id="btn" onclick="gosterMesaj()">Yeni Mesaj Göster</button>
 
+    <script>
+        const mesajlar = [
+            "Kurban Bayramınız mübarek olsun!",
+            "Sevdiklerinizle birlikte huzur dolu bir Kurban Bayramı dilerim.",
+            "Kurban Bayramı, paylaşmanın ve sevmenin bayramıdır. Kutlu olsun!",
+            "Bayramda gönlünüzce sevin, dostça sarılın!",
+            "Bereketin ve huzurun sofranızdan eksik olmadığı bir bayram olsun.",
+            "Kurban Bayramı kalplere merhamet, yüzlere tebessüm getirsin.",
+            "Bayram sevincini doyasıya yaşamanız dileğiyle!",
+            "Kurban Bayramı, kalpleri birleştirsin, küslükleri gidersin.",
+            "Bayramınız sağlık, huzur ve neşeyle dolsun!",
+            "Kurban Bayramı’nda gönlünüz ferah, sofranız bereketli olsun!",
+            "Dostlukların tazelendiği, duaların kabul olduğu bir bayram dilerim.",
+            "Kurban Bayramı, yardımlaşma ve paylaşma duygularını artırır. Nice bayramlara!",
+            "Kurban Bayramı'nız sevgiyle, barışla, mutlulukla dolsun.",
+            "Küskünlerin barıştığı, sevgilerin çoğaldığı bir bayram olsun.",
+            "Bu bayramda en güzel duygular sizinle olsun.",
+            "Kurban Bayramı; umut, sabır ve sevgiyle gelsin.",
+            "Bayramlar kalpleri birleştirir, sizi sevdiklerinizle buluştursun.",
+            "Kurban Bayramı'nız bereketli, kalbiniz huzur dolu olsun.",
+            "Kurban ruhunu yüreğinizde hissedeceğiniz güzel bir bayram dilerim.",
+            "Nice kurban bayramlarına, sağlık ve mutlulukla ulaşmanız dileğiyle!"
+        ];
+
+        function gosterMesaj() {
             const rastgeleIndex = Math.floor(Math.random() * mesajlar.length);
             document.getElementById("mesaj").innerText = mesajlar[rastgeleIndex];
         }
 
         window.onload = gosterMesaj;
     </script>
-</head>
-<body>
-    <div id="mesaj"></div>
-    <div id="iban">IBAN: <strong>TR06 0004 6005 4988 8000 1679 40</strong></div>
-    <div id="not">Harçlıklarınızı bekliyorum 😄</div>
 </body>
 </html>
